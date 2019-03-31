@@ -5,6 +5,7 @@ namespace NesoHost\Http\Controllers;
 use Illuminate\Support\Str;
 use NesoHost\Models\Image;
 use NesoHost\Http\Requests\NesoRequest;
+use Intervention\Image\ImageManagerStatic as ImageManager;
 
 class ImageController extends Controller
 {
@@ -20,7 +21,11 @@ class ImageController extends Controller
         $filename = Str::random(30);
         $extension = $request->image->getClientOriginalExtension();
 
-        $request->image->move(public_path('images'), $filename . '.' . $extension);
+        ImageManager::make($request->image)
+            ->resize(300, 200)
+            ->save(public_path(config('app.thumbnails_path')) . '/' . $filename . '.' . $extension);
+
+        $request->image->move(public_path(config('app.images_path')), $filename . '.' . $extension);
 
         $image->filename = $filename;
         $image->extension = $request->image->getClientOriginalExtension();
@@ -28,7 +33,7 @@ class ImageController extends Controller
         $image->save();
 
         if ($request->image_jump === 'on') {
-            return redirect('/images/' . $filename . '.' . $extension);
+            return redirect('/' . config('app.images_path') .'/' . $filename . '.' . $extension);
         }
 
         return redirect()->route('image.show', ['image' => $filename]);
@@ -51,9 +56,17 @@ class ImageController extends Controller
             $file->extension
         );
 
+        $directThumbnailLink = sprintf('%s/%s/%s.%s',
+            env('APP_URL'),
+            config('app.thumbnails_path'),
+            $file->filename,
+            $file->extension
+        );
+
         return view('show')
             ->withImage($file)
-            ->withDirectLink($directLink);
+            ->withDirectLink($directLink)
+            ->withDirectThumbnailLink($directThumbnailLink);
     }
 
     /**

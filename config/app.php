@@ -2,6 +2,9 @@
 
 return [
     'images_path' => 'images',
+    'thumbnails_path' => 'thumbnails',
+    'max_size' => 10240,
+    'allowed_extensions' => 'jpeg,jpg,png,gif',
 
     /*
     |--------------------------------------------------------------------------
