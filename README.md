@@ -3,7 +3,7 @@
 NesoHost is a micro local image hosting powered by Laravel.
 It's a still Work in Progress, but already have ability to upload images.
 
-The future is:
+In a future:
 
 * User Accounts with simple gallery
 * Password Protected Images
