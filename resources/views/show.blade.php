@@ -39,6 +39,6 @@
     </div>
 
     <div class="mt-5">
-        <a class="btn btn-primary" href="{{ env('APP_URL') }}">Return to homepage</a>
+        <a class="btn btn-primary" href="{{ config('app.url') }}">Return to homepage</a>
     </div>
 @endsection

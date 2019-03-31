@@ -49,15 +49,15 @@ class ImageController extends Controller
     {
         $file = Image::where('filename', $filename)->firstOrFail();
 
-        $directLink = sprintf('%s/%s/%s.%s',
-            env('APP_URL'),
+        $directLink = sprintf('%s%s/%s.%s',
+            config('app.url'),
             config('app.images_path'),
             $file->filename,
             $file->extension
         );
 
-        $directThumbnailLink = sprintf('%s/%s/%s.%s',
-            env('APP_URL'),
+        $directThumbnailLink = sprintf('%s%s/%s.%s',
+            config('app.url'),
             config('app.thumbnails_path'),
             $file->filename,
             $file->extension
