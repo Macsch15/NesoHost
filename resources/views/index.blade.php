@@ -2,7 +2,7 @@
 
 @section('content')
     <h1 class="display-4">Welcome to <a class="text-light" href="{{ route('index') }}">NesoHost</a>!👾</h1>
-    <p class="lead">Please select image to upload. Allowed extensions: <b>.jpg, .jpeg, .gif, .png</b>. Maximum size: <b>10MB</b>.</p>
+    <p class="lead">Please select image to upload. Allowed extensions: <b>{{ str_replace(',', ' ,', config('app.allowed_extensions')) }}</b>. Maximum size: <b>{{ config('app.max_size') / 1024 }}MB</b>.</p>
 
     @if ($errors->any())
         <div class="alert alert-danger" role="alert">
@@ -24,13 +24,13 @@
                 @csrf
                 @method('POST')
 
-                <div class="custom-control custom-checkbox mt-3">
+                <div class="custom-control custom-checkbox mt-4">
                     <input type="checkbox" name="image_jump" class="custom-control-input" id="image_jump">
                     <label class="custom-control-label" for="image_jump">Jump directly into the image after upload</label>
                 </div>
             </div>
 
-            <button class="btn btn-primary">Upload!</button>
+            <button class="mt-4 btn btn-lg btn-primary">Upload!</button>
         </form>
     </div>
 @endsection

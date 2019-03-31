@@ -24,7 +24,12 @@ class NesoRequest extends FormRequest
     public function rules()
     {
         return [
-            'image' => 'required|image|mimes:jpeg,jpg,png,gif|max:10240'
+            'image' => [
+                'required',
+                'image',
+                sprintf('mimes:%s', config('app.allowed_extensions')),
+                sprintf('max:%s', config('app.max_size'))
+            ]
         ];
     }
 }
