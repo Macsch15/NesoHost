@@ -3,9 +3,9 @@
 NesoHost is a micro local image hosting powered by Laravel.
 It's a still Work in Progress, but already have ability to upload images.
 
-[![Image: bcEln2CNVJdFlN9p6xSCe17sPRzuK5](https://storage.macsch15.pl/images/bcEln2CNVJdFlN9p6xSCe17sPRzuK5.png)](https://storage.macsch15.pl/images/bcEln2CNVJdFlN9p6xSCe17sPRzuK5.png)
+[![Image: rOocFV6t6HLlveFBxrl1Flycdwc7L3](https://storage.macsch15.pl/images/rOocFV6t6HLlveFBxrl1Flycdwc7L3.png)](https://storage.macsch15.pl/images/rOocFV6t6HLlveFBxrl1Flycdwc7L3.png)
 
-[![Image: gn4MMzLIxM0hc1WB8LEkxmdEpcmxge](https://storage.macsch15.pl/images/gn4MMzLIxM0hc1WB8LEkxmdEpcmxge.png)](https://storage.macsch15.pl/images/gn4MMzLIxM0hc1WB8LEkxmdEpcmxge.png)
+[![Image: VcLXKs4ss9EAzwZpulZU5kS1uSV4Zh](https://storage.macsch15.pl/images/VcLXKs4ss9EAzwZpulZU5kS1uSV4Zh.png)](https://storage.macsch15.pl/images/VcLXKs4ss9EAzwZpulZU5kS1uSV4Zh.png)
 
 In a future:
 
