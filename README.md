@@ -1,4 +1,4 @@
-# NesoHost👾 (WIP)
+# NesoHost👾 (WIP) [![StyleCI](https://github.styleci.io/repos/177443149/shield?branch=master)](https://github.styleci.io/repos/177443149?branch=master)
 
 NesoHost is a micro local image hosting powered by Laravel.
 It's a still Work in Progress, but already have ability to upload images.
