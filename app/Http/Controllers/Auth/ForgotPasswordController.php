@@ -2,8 +2,8 @@
 
 namespace NesoHost\Http\Controllers\Auth;
 
-use NesoHost\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
+use NesoHost\Http\Controllers\Controller;
 
 class ForgotPasswordController extends Controller
 {

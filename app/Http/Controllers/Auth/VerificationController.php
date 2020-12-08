@@ -2,8 +2,8 @@
 
 namespace NesoHost\Http\Controllers\Auth;
 
-use NesoHost\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\VerifiesEmails;
+use NesoHost\Http\Controllers\Controller;
 
 class VerificationController extends Controller
 {
