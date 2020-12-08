@@ -28,8 +28,8 @@ class NesoRequest extends FormRequest
                 'required',
                 'image',
                 sprintf('mimes:%s', config('app.allowed_extensions')),
-                sprintf('max:%s', config('app.max_size'))
-            ]
+                sprintf('max:%s', config('app.max_size')),
+            ],
         ];
     }
 }
